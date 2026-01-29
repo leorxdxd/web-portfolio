@@ -34,6 +34,16 @@
       padding: 34px 26px;
     }
 
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px;
+      border: 3px solid #38bdf8;
+    }
+
     .sidebar h2 {
       font-size: 14px;
       margin: 22px 0 10px;
@@ -42,7 +52,7 @@
       color: #38bdf8;
     }
 
-    .sidebar p, .sidebar li {
+    .sidebar p {
       font-size: 13px;
       line-height: 1.6;
     }
@@ -95,6 +105,11 @@
       color: #334155;
       line-height: 1.7;
     }
+
+    @media print {
+      body { padding: 0; background: none; }
+      .page { box-shadow: none; }
+    }
   </style>
 </head>
 
@@ -103,6 +118,8 @@
 <div class="page">
 
   <aside class="sidebar">
+    <img src="image/profile.png" alt="Roel Delos Reyes" class="profile-img" />
+
     <h2>Contact</h2>
     <p>
       roeldelosreyes0105@gmail.com<br />
@@ -132,9 +149,9 @@
       <div class="section-title">Professional Summary</div>
       <p class="job-desc">
         Fullstack Web Developer with experience delivering production-ready
-        websites and web applications for businesses across healthcare and
-        corporate industries. Strong background in frontend and backend
-        development, WordPress solutions, and performance optimization.
+        websites and applications for healthcare and corporate clients.
+        Strong in frontend and backend development, WordPress solutions,
+        and performance optimization.
       </p>
     </div>
 
@@ -143,22 +160,20 @@
 
       <div class="job">
         <div class="job-title">Web Developer — Allegiance Partners</div>
-        <div class="job-sub">Corporate Website · Australia</div>
+        <div class="job-sub">Australia · Corporate Website</div>
         <div class="job-desc">
-          Designed, developed, and deployed a corporate website focused on
-          business credibility, responsive design, and performance optimization.
-          Collaborated with stakeholders to translate requirements into a
-          polished digital presence.
+          Designed and developed a corporate website emphasizing usability,
+          responsive design, SEO-friendly structure, and performance optimization.
         </div>
       </div>
 
       <div class="job">
         <div class="job-title">Web Developer — IMH Pediatrics</div>
-        <div class="job-sub">Healthcare Website · USA</div>
+        <div class="job-sub">USA · Healthcare Website</div>
         <div class="job-desc">
-          Built and maintained a healthcare-focused WordPress website with
-          custom layouts, structured content, accessibility considerations,
-          and security-aware development practices.
+          Built and maintained a healthcare-focused WordPress website with custom
+          layouts, structured content, accessibility considerations, and security
+          best practices.
         </div>
       </div>
 
@@ -167,7 +182,7 @@
         <div class="job-sub">Web Application</div>
         <div class="job-desc">
           Developed a modern web application using contemporary frontend
-          frameworks, focusing on clean UI, performance, and scalability.
+          frameworks, focusing on clean UI, scalability, and performance.
         </div>
       </div>
 
