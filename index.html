@@ -23,32 +23,39 @@
       max-width: 1200px;
       margin: auto;
       padding: 60px 24px 80px;
-    }
-
-    header {
       text-align: center;
-      margin-bottom: 60px;
     }
 
-    header h1 {
+    /* PROFILE */
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #38bdf8;
+      box-shadow: 0 12px 35px rgba(56,189,248,0.35);
+      margin-bottom: 20px;
+    }
+
+    h1 {
       font-size: 42px;
       font-weight: 800;
       letter-spacing: -0.8px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
-    header p {
+    .subtitle {
       font-size: 16px;
       color: #94a3b8;
-      max-width: 700px;
+      max-width: 720px;
       margin: auto;
       line-height: 1.7;
     }
 
     .resume-btn {
       display: inline-block;
-      margin-top: 28px;
-      padding: 14px 26px;
+      margin-top: 30px;
+      padding: 14px 28px;
       border-radius: 999px;
       background: #38bdf8;
       color: #020617;
@@ -62,11 +69,13 @@
       box-shadow: 0 15px 30px rgba(56,189,248,0.4);
     }
 
+    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 28px;
-      margin-top: 60px;
+      margin-top: 70px;
+      text-align: left;
     }
 
     .card {
@@ -119,56 +128,45 @@
 
 <div class="container">
 
-  <header>
-    <h1>Roel Delos Reyes</h1>
-    <p>
-      Fullstack Web Developer specializing in modern, responsive, and scalable
-      web applications. Below are selected real-world projects I’ve built for
-      businesses and organizations.
-    </p>
+  <!-- PROFILE -->
+  <img src="image/profile.png" alt="Roel Delos Reyes" class="profile-img" />
 
-    <a href="works.html" class="resume-btn">View CV / Resume</a>
-  </header>
+  <h1>Roel Delos Reyes</h1>
+  <p class="subtitle">
+    Fullstack Web Developer specializing in modern, responsive, and scalable
+    web applications. Below are selected real-world projects I’ve built.
+  </p>
 
+  <a href="works.html" class="resume-btn">View CV / Resume</a>
+
+  <!-- PROJECTS -->
   <div class="grid">
 
     <div class="card">
       <h3>Personal Portfolio</h3>
       <span>rdlrportfolio.netlify.app</span>
-      <p>
-        My personal portfolio showcasing projects, skills, and modern frontend
-        design practices.
-      </p>
+      <p>My personal portfolio showcasing projects, skills, and modern UI practices.</p>
       <a href="https://rdlrportfolio.netlify.app" target="_blank">Visit Website →</a>
     </div>
 
     <div class="card">
       <h3>Allegiance Partners</h3>
       <span>Corporate Website · Australia</span>
-      <p>
-        Designed and developed a professional corporate website with a strong
-        focus on usability, performance, and business credibility.
-      </p>
+      <p>Corporate website focused on performance, clarity, and business credibility.</p>
       <a href="https://allegiancepartners.com.au" target="_blank">Visit Website →</a>
     </div>
 
     <div class="card">
       <h3>IMH Pediatrics</h3>
       <span>Healthcare Website · USA</span>
-      <p>
-        Built a healthcare-focused WordPress website with clean UI, structured
-        content, accessibility considerations, and security best practices.
-      </p>
+      <p>Healthcare-focused WordPress website with accessibility and security best practices.</p>
       <a href="https://imhpeds.com/" target="_blank">Visit Website →</a>
     </div>
 
     <div class="card">
       <h3>Allevia Health</h3>
-      <span>Web Application · Vercel</span>
-      <p>
-        Developed a modern web application with responsive layout, fast load
-        times, and scalable frontend architecture.
-      </p>
+      <span>Web Application</span>
+      <p>Modern responsive web application built with performance and scalability in mind.</p>
       <a href="https://allevia-health.vercel.app/" target="_blank">Visit Website →</a>
     </div>
 
