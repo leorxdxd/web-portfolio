@@ -23,10 +23,14 @@
       max-width: 1200px;
       margin: auto;
       padding: 60px 24px 80px;
-      text-align: center;
     }
 
-    /* PROFILE */
+    /* PROFILE TOP */
+    .top-profile {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
     .profile-img {
       width: 140px;
       height: 140px;
@@ -42,6 +46,7 @@
       font-weight: 800;
       letter-spacing: -0.8px;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     .subtitle {
@@ -50,15 +55,28 @@
       max-width: 720px;
       margin: auto;
       line-height: 1.7;
+      text-align: center;
     }
 
-    /* BUTTONS */
+    /* HERO SECTION */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .hero-content {
+      text-align: left;
+    }
+
     .actions {
       margin-top: 30px;
       display: flex;
       flex-direction: column;
-      align-items: center;
       gap: 14px;
+      align-items: flex-start;
     }
 
     .resume-btn {
@@ -68,6 +86,7 @@
       color: #020617;
       font-weight: 600;
       text-decoration: none;
+      width: fit-content;
       transition: 0.25s ease;
     }
 
@@ -76,7 +95,6 @@
       box-shadow: 0 15px 30px rgba(56,189,248,0.4);
     }
 
-    /* HIGHLIGHTED PORTFOLIO LINK */
     .portfolio-highlight {
       display: inline-flex;
       align-items: center;
@@ -90,6 +108,7 @@
       font-weight: 600;
       text-decoration: none;
       transition: 0.25s ease;
+      width: fit-content;
     }
 
     .portfolio-highlight span {
@@ -101,19 +120,21 @@
       box-shadow: 0 18px 36px rgba(56,189,248,0.25);
     }
 
-    /* GRID */
+    .hero-image img {
+      width: 100%;
+      max-width: 420px; /* DI MASAKIT SA MATA */
+      display: block;
+      margin-left: auto;
+      border-radius: 16px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    }
+
+    /* PROJECT GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 28px;
-      margin-top: 80px;
-      text-align: left;
-    }
-
-    @media (max-width: 900px) {
-      .grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      }
+      margin-top: 100px;
     }
 
     .card {
@@ -123,9 +144,8 @@
       padding: 26px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      transition: 0.3s ease;
       min-height: 260px;
+      transition: 0.3s ease;
     }
 
     .card:hover {
@@ -142,7 +162,6 @@
     .card span {
       font-size: 14px;
       color: #94a3b8;
-      display: block;
       margin-bottom: 14px;
     }
 
@@ -150,7 +169,6 @@
       font-size: 15px;
       color: #cbd5f5;
       line-height: 1.7;
-      margin-bottom: 18px;
       flex-grow: 1;
     }
 
@@ -164,6 +182,30 @@
     .card a:hover {
       text-decoration: underline;
     }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .actions {
+        align-items: center;
+      }
+
+      .hero-image img {
+        margin: 40px auto 0;
+      }
+
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+    }
   </style>
 </head>
 
@@ -171,27 +213,43 @@
 
 <div class="container">
 
-  <!-- PROFILE -->
-  <img src="image/profile.png" alt="Roel Delos Reyes" class="profile-img" />
-
-  <h1>Roel Delos Reyes</h1>
-  <p class="subtitle">
-    Fullstack Web Developer specializing in modern, responsive, and scalable
-    web applications. Below are selected real-world projects I’ve built.
-  </p>
-
-  <!-- ACTIONS -->
-  <div class="actions">
-    <a href="works.html" class="resume-btn">View CV / Resume</a>
-
-    <a
-      href="https://rdlrportfolio.netlify.app"
-      target="_blank"
-      class="portfolio-highlight"
-    >
-      🌐 <span>rdlrportfolio.netlify.app</span>
-    </a>
+  <!-- TOP PROFILE -->
+  <div class="top-profile">
+    <img src="image/profile.png" alt="Roel Delos Reyes" class="profile-img" />
+    <h1>Roel Delos Reyes</h1>
+    <p class="subtitle">
+      Fullstack Web Developer specializing in modern, responsive, and scalable
+      web applications.
+    </p>
   </div>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+      <p class="subtitle" style="text-align:left; margin:0;">
+        Below are selected real-world projects I’ve built for businesses and
+        organizations, focusing on performance, usability, and modern design.
+      </p>
+
+      <div class="actions">
+        <a href="works.html" class="resume-btn">View CV / Resume</a>
+
+        <a
+          href="https://rdlrportfolio.netlify.app"
+          target="_blank"
+          class="portfolio-highlight"
+        >
+          🌐 <span>rdlrportfolio.netlify.app</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="image/portfolio.png" alt="Portfolio Preview" />
+    </div>
+
+  </section>
 
   <!-- PROJECTS -->
   <div class="grid">
@@ -203,9 +261,7 @@
         Professional corporate website designed for business credibility,
         performance, and clean user experience.
       </p>
-      <a href="https://allegiancepartners.com.au" target="_blank">
-        Visit Website →
-      </a>
+      <a href="https://allegiancepartners.com.au" target="_blank">Visit Website →</a>
     </div>
 
     <div class="card">
@@ -215,9 +271,7 @@
         Healthcare-focused WordPress website with structured content,
         accessibility considerations, and security best practices.
       </p>
-      <a href="https://imhpeds.com/" target="_blank">
-        Visit Website →
-      </a>
+      <a href="https://imhpeds.com/" target="_blank">Visit Website →</a>
     </div>
 
     <div class="card">
@@ -227,9 +281,7 @@
         Modern responsive web application built with clean UI, fast load times,
         and scalable frontend architecture.
       </p>
-      <a href="https://allevia-health.vercel.app/" target="_blank">
-        Visit Website →
-      </a>
+      <a href="https://allevia-health.vercel.app/" target="_blank">Visit Website →</a>
     </div>
 
   </div>
