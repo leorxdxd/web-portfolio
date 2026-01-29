@@ -15,65 +15,60 @@
 
     body {
       margin: 0;
-      padding: 30px;
       font-family: 'Inter', sans-serif;
-      background: #0f172a;
+      background: radial-gradient(circle at top, #0f172a, #020617);
       color: #e5e7eb;
     }
 
-    .resume {
-      max-width: 960px;
+    .wrapper {
+      max-width: 1000px;
       margin: auto;
-      background: #020617;
-      border-radius: 18px;
-      padding: 40px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      padding: 40px 24px 60px;
     }
 
-    /* HEADER */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      border-bottom: 1px solid #1e293b;
-      padding-bottom: 24px;
-      margin-bottom: 32px;
-      flex-wrap: wrap;
-    }
-
-    .profile {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+    /* HERO */
+    .hero {
+      position: relative;
+      background: linear-gradient(180deg, #020617, #020617ee);
+      border-radius: 24px;
+      padding: 80px 40px 40px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.65);
+      text-align: center;
     }
 
     .profile-img {
-      width: 96px;
-      height: 96px;
+      position: absolute;
+      top: 40px; /* IBABA KONTI PARA KITA MUKHA */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid #38bdf8;
-      box-shadow: 0 0 0 4px rgba(56,189,248,0.15);
+      border: 3px solid #38bdf8;
+      box-shadow: 0 12px 40px rgba(56,189,248,0.35);
+      background: #020617;
     }
 
     .name {
-      font-size: 36px;
+      margin-top: 120px;
+      font-size: 40px;
       font-weight: 800;
-      letter-spacing: -0.6px;
+      letter-spacing: -0.8px;
     }
 
-    .title {
-      font-size: 16px;
-      color: #38bdf8;
+    .role {
+      margin-top: 10px;
+      font-size: 17px;
       font-weight: 600;
-      margin-top: 6px;
+      color: #38bdf8;
     }
 
     .contact {
+      margin-top: 22px;
       font-size: 14px;
       color: #94a3b8;
-      line-height: 1.7;
-      text-align: right;
+      line-height: 1.8;
     }
 
     .contact a {
@@ -82,237 +77,232 @@
       font-weight: 500;
     }
 
-    .contact a:hover { text-decoration: underline; }
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #1e293b, transparent);
+      margin: 50px 0;
+    }
 
     /* SECTIONS */
     .section {
-      margin-bottom: 36px;
+      margin-bottom: 50px;
     }
 
     .section-title {
       font-size: 14px;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #64748b;
-      margin-bottom: 14px;
+      margin-bottom: 18px;
+      text-align: center;
     }
 
     .summary {
+      max-width: 760px;
+      margin: auto;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #cbd5f5;
+    }
+
+    /* LINK CARDS */
+    .links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .link-card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-4px);
+      border-color: #38bdf8;
+      box-shadow: 0 20px 40px rgba(56,189,248,0.18);
+    }
+
+    .link-card strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .link-card span {
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    .link-card a {
+      display: inline-block;
+      margin-top: 12px;
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .skill {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid #1e293b;
+      font-size: 14px;
+      background: #020617;
+      transition: 0.25s ease;
+    }
+
+    .skill:hover {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 1px rgba(56,189,248,0.35);
+    }
+
+    /* EDUCATION */
+    .education {
+      text-align: center;
       font-size: 15px;
       color: #cbd5f5;
       line-height: 1.7;
     }
 
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-    }
-
-    /* SKILLS */
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skill {
-      background: #020617;
-      border: 1px solid #1e293b;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      transition: all 0.2s ease;
-    }
-
-    .skill:hover {
-      border-color: #38bdf8;
-      box-shadow: 0 0 0 1px rgba(56,189,248,0.3);
-    }
-
-    /* PROJECT / LINK CARDS */
-    .link-card {
-      padding: 14px 16px;
-      border-radius: 12px;
-      border: 1px solid #1e293b;
-      margin-bottom: 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: all 0.25s ease;
-    }
-
-    .link-card:hover {
-      transform: translateY(-2px);
-      border-color: #38bdf8;
-      box-shadow: 0 10px 25px rgba(56,189,248,0.15);
-    }
-
-    .link-info strong {
-      display: block;
-      font-size: 15px;
-    }
-
-    .link-info span {
-      font-size: 13px;
-      color: #94a3b8;
-    }
-
-    /* EDUCATION */
-    .edu-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .edu-school {
-      color: #94a3b8;
-      font-size: 14px;
-    }
-
     footer {
       text-align: center;
+      margin-top: 70px;
       font-size: 13px;
       color: #64748b;
-      border-top: 1px solid #1e293b;
-      padding-top: 20px;
-      margin-top: 40px;
     }
 
     @media (max-width: 768px) {
-      .header {
-        flex-direction: column;
+      .profile-img {
+        width: 120px;
+        height: 120px;
+        top: 36px;
       }
-      .contact {
-        text-align: left;
-      }
-      .grid {
-        grid-template-columns: 1fr;
-      }
-      .profile {
-        flex-direction: column;
-        align-items: flex-start;
+      .name {
+        font-size: 32px;
       }
     }
   </style>
 </head>
 
 <body>
-<div class="resume">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="profile">
-      <img src="image/profile.png" alt="Roel Delos Reyes" class="profile-img" />
-      <div>
-        <div class="name">Roel Delos Reyes</div>
-        <div class="title">Fullstack Web Developer</div>
-      </div>
-    </div>
+<div class="wrapper">
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="image/profile.jpg" alt="Roel Delos Reyes" class="profile-img" />
+
+    <div class="name">Roel Delos Reyes</div>
+    <div class="role">Fullstack Web Developer</div>
 
     <div class="contact">
       📧 <a href="mailto:roeldelosreyes0105@gmail.com">roeldelosreyes0105@gmail.com</a><br />
-      📞 +63 950 112 2587<br />
-      💬 WhatsApp: +63 950 112 2587<br />
-      💻 GitHub: <a href="https://github.com/leorxdxd" target="_blank">github.com/leorxdxd</a>
+      📞 +63 950 112 2587 · 💬 WhatsApp<br />
+      💻 <a href="https://github.com/leorxdxd" target="_blank">github.com/leorxdxd</a>
     </div>
   </div>
 
+  <div class="divider"></div>
+
   <!-- SUMMARY -->
   <div class="section">
-    <div class="section-title">Professional Summary</div>
+    <div class="section-title">About Me</div>
     <div class="summary">
-      Fullstack Web Developer with hands-on experience building modern, responsive,
-      and scalable web applications using multiple frameworks and platforms.
-      Strong in both frontend and backend development, WordPress solutions,
-      and cybersecurity-aware practices. Focused on clean code, performance,
-      and delivering real business value.
+      Fullstack Web Developer experienced in building modern, responsive, and scalable
+      applications using multiple frameworks and platforms. Strong in frontend and backend
+      development, WordPress solutions, and cybersecurity-aware practices. Focused on clean
+      code, performance, and real-world problem solving.
     </div>
   </div>
 
   <!-- PORTFOLIO -->
   <div class="section">
     <div class="section-title">Portfolio</div>
-    <div class="link-card">
-      <div class="link-info">
+    <div class="links">
+      <div class="link-card">
         <strong>Personal Portfolio</strong>
         <span>rdlrportfolio.netlify.app</span>
+        <a href="https://rdlrportfolio.netlify.app" target="_blank">Visit →</a>
       </div>
-      <a href="https://rdlrportfolio.netlify.app" target="_blank">Visit →</a>
     </div>
   </div>
 
-  <!-- SELECTED WORKS -->
+  <!-- WORKS -->
   <div class="section">
     <div class="section-title">Selected Works</div>
-
-    <div class="link-card">
-      <div class="link-info">
+    <div class="links">
+      <div class="link-card">
         <strong>Allegiance Partners</strong>
         <span>allegiancepartners.com.au</span>
+        <a href="https://allegiancepartners.com.au" target="_blank">View →</a>
       </div>
-      <a href="https://allegiancepartners.com.au" target="_blank">View →</a>
-    </div>
 
-    <div class="link-card">
-      <div class="link-info">
+      <div class="link-card">
         <strong>IMH Pediatrics</strong>
         <span>imhpeds.com</span>
+        <a href="https://imhpeds.com/" target="_blank">View →</a>
       </div>
-      <a href="https://imhpeds.com/" target="_blank">View →</a>
-    </div>
 
-    <div class="link-card">
-      <div class="link-info">
+      <div class="link-card">
         <strong>Allevia Health</strong>
         <span>allevia-health.vercel.app</span>
+        <a href="https://allevia-health.vercel.app/" target="_blank">View →</a>
       </div>
-      <a href="https://allevia-health.vercel.app/" target="_blank">View →</a>
     </div>
   </div>
 
-  <!-- SKILLS -->
-  <div class="grid">
-
-    <div class="section">
-      <div class="section-title">Hard Skills</div>
-      <div class="skills-list">
-        <div class="skill">HTML5</div>
-        <div class="skill">CSS3</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">PHP</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">React</div>
-        <div class="skill">Next.js</div>
-        <div class="skill">Node.js</div>
-        <div class="skill">WordPress Development</div>
-        <div class="skill">REST APIs</div>
-        <div class="skill">Git & GitHub</div>
-        <div class="skill">Basic Cybersecurity</div>
-      </div>
+  <!-- HARD SKILLS -->
+  <div class="section">
+    <div class="section-title">Hard Skills</div>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">PHP</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">React</div>
+      <div class="skill">Next.js</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">WordPress</div>
+      <div class="skill">REST APIs</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Cybersecurity Basics</div>
     </div>
+  </div>
 
-    <div class="section">
-      <div class="section-title">Soft Skills</div>
-      <div class="skills-list">
-        <div class="skill">Problem Solving</div>
-        <div class="skill">Communication</div>
-        <div class="skill">Critical Thinking</div>
-        <div class="skill">Team Collaboration</div>
-        <div class="skill">Time Management</div>
-        <div class="skill">Adaptability</div>
-        <div class="skill">Attention to Detail</div>
-      </div>
+  <!-- SOFT SKILLS -->
+  <div class="section">
+    <div class="section-title">Soft Skills</div>
+    <div class="skills">
+      <div class="skill">Problem Solving</div>
+      <div class="skill">Communication</div>
+      <div class="skill">Critical Thinking</div>
+      <div class="skill">Teamwork</div>
+      <div class="skill">Adaptability</div>
+      <div class="skill">Time Management</div>
     </div>
-
   </div>
 
   <!-- EDUCATION -->
   <div class="section">
     <div class="section-title">Education</div>
-    <div class="edu-title">Bachelor of Science in Information Technology</div>
-    <div class="edu-school">
+    <div class="education">
+      <strong>Bachelor of Science in Information Technology</strong><br />
       Southville International School and Colleges<br />
       Major in Cybersecurity
     </div>
@@ -323,5 +313,6 @@
   </footer>
 
 </div>
+
 </body>
 </html>
