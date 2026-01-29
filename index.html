@@ -4,86 +4,219 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roel Delos Reyes | Web Developer</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #0f172a, #020617);
       color: #e5e7eb;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 0;
+      padding: 20px;
     }
-    .container {
-      max-width: 600px;
+
+    .card {
+      max-width: 640px;
       width: 100%;
-      background: #020617;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      background: linear-gradient(180deg, #020617, #020617f5);
+      border-radius: 18px;
+      padding: 36px;
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      position: relative;
     }
+
+    .header {
+      margin-bottom: 28px;
+    }
+
     h1 {
-      margin-bottom: 5px;
-      font-size: 26px;
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: -0.5px;
     }
-    p {
-      color: #9ca3af;
-      margin-top: 0;
+
+    .role {
+      color: #94a3b8;
+      font-size: 15px;
+      margin-top: 6px;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 25px;
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        #1e293b,
+        transparent
+      );
+      margin: 28px 0;
     }
-    li {
+
+    .section {
+      margin-bottom: 26px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      color: #64748b;
+      text-transform: uppercase;
       margin-bottom: 12px;
     }
+
+    .link-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #020617;
+      border: 1px solid #1e293b;
+      transition: all 0.25s ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-2px);
+      border-color: #38bdf8;
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
+    }
+
+    .link-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .icon {
+      font-size: 18px;
+    }
+
+    .link-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-text strong {
+      font-size: 15px;
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    .link-text span {
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
     a {
       color: #38bdf8;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 14px;
+      font-weight: 500;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     footer {
-      margin-top: 25px;
+      margin-top: 32px;
+      text-align: center;
       font-size: 13px;
       color: #64748b;
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Roel Delos Reyes</h1>
-    <p>Web Developer</p>
+  <div class="card">
 
-    <ul>
-      <li>
-        🌐 <strong>Portfolio:</strong><br />
-        <a href="https://rdlrportfolio.netlify.app" target="_blank">
-          https://rdlrportfolio.netlify.app
-        </a>
-      </li>
+    <div class="header">
+      <h1>Roel Delos Reyes</h1>
+      <div class="role">Web Developer</div>
+    </div>
 
-      <li>
-        💼 <strong>Selected Works:</strong><br />
-        <a href="https://allegiancepartners.com.au" target="_blank">
-          allegiancepartners.com.au
-        </a><br />
-        <a href="https://imhpeds.com/" target="_blank">
-          imhpeds.com
-        </a><br />
-        <a href="https://allevia-health.vercel.app/" target="_blank">
-          allevia-health.vercel.app
-        </a>
-      </li>
-    </ul>
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">Portfolio</div>
+      <div class="link-list">
+        <div class="link-card">
+          <div class="link-left">
+            <div class="icon">🌐</div>
+            <div class="link-text">
+              <strong>Personal Portfolio</strong>
+              <span>rdlrportfolio.netlify.app</span>
+            </div>
+          </div>
+          <a href="https://rdlrportfolio.netlify.app" target="_blank">Visit →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Selected Works</div>
+      <div class="link-list">
+
+        <div class="link-card">
+          <div class="link-left">
+            <div class="icon">💼</div>
+            <div class="link-text">
+              <strong>Allegiance Partners</strong>
+              <span>allegiancepartners.com.au</span>
+            </div>
+          </div>
+          <a href="https://allegiancepartners.com.au" target="_blank">View →</a>
+        </div>
+
+        <div class="link-card">
+          <div class="link-left">
+            <div class="icon">🧑‍⚕️</div>
+            <div class="link-text">
+              <strong>IMH Pediatrics</strong>
+              <span>imhpeds.com</span>
+            </div>
+          </div>
+          <a href="https://imhpeds.com/" target="_blank">View →</a>
+        </div>
+
+        <div class="link-card">
+          <div class="link-left">
+            <div class="icon">💊</div>
+            <div class="link-text">
+              <strong>Allevia Health</strong>
+              <span>allevia-health.vercel.app</span>
+            </div>
+          </div>
+          <a href="https://allevia-health.vercel.app/" target="_blank">View →</a>
+        </div>
+
+      </div>
+    </div>
 
     <footer>
       © 2026 Roel Delos Reyes
     </footer>
+
   </div>
 </body>
 </html>
