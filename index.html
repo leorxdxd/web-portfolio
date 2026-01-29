@@ -33,12 +33,27 @@
     /* HEADER */
     .header {
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       gap: 20px;
       border-bottom: 1px solid #1e293b;
       padding-bottom: 24px;
       margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-img {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #38bdf8;
+      box-shadow: 0 0 0 4px rgba(56,189,248,0.15);
     }
 
     .name {
@@ -116,7 +131,7 @@
       box-shadow: 0 0 0 1px rgba(56,189,248,0.3);
     }
 
-    /* LINKS / PROJECTS */
+    /* PROJECT / LINK CARDS */
     .link-card {
       padding: 14px 16px;
       border-radius: 12px;
@@ -166,9 +181,19 @@
     }
 
     @media (max-width: 768px) {
-      .header { flex-direction: column; }
-      .contact { text-align: left; }
-      .grid { grid-template-columns: 1fr; }
+      .header {
+        flex-direction: column;
+      }
+      .contact {
+        text-align: left;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .profile {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
@@ -178,9 +203,12 @@
 
   <!-- HEADER -->
   <div class="header">
-    <div>
-      <div class="name">Roel Delos Reyes</div>
-      <div class="title">Fullstack Web Developer</div>
+    <div class="profile">
+      <img src="image/profile.png" alt="Roel Delos Reyes" class="profile-img" />
+      <div>
+        <div class="name">Roel Delos Reyes</div>
+        <div class="title">Fullstack Web Developer</div>
+      </div>
     </div>
 
     <div class="contact">
@@ -195,10 +223,11 @@
   <div class="section">
     <div class="section-title">Professional Summary</div>
     <div class="summary">
-      Fullstack Web Developer with strong experience building modern, responsive,
-      and scalable websites and applications using multiple frameworks and platforms.
-      Skilled in frontend and backend development, WordPress solutions, and security-aware
-      practices. Passionate about clean code, performance, and delivering real business value.
+      Fullstack Web Developer with hands-on experience building modern, responsive,
+      and scalable web applications using multiple frameworks and platforms.
+      Strong in both frontend and backend development, WordPress solutions,
+      and cybersecurity-aware practices. Focused on clean code, performance,
+      and delivering real business value.
     </div>
   </div>
 
