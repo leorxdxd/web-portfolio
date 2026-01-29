@@ -31,11 +31,11 @@
       box-shadow: 0 20px 50px rgba(0,0,0,0.2);
     }
 
-    /* LEFT SIDEBAR */
+    /* SIDEBAR */
     .sidebar {
       background: #0f172a;
       color: #ffffff;
-      padding: 36px 28px;
+      padding: 34px 26px;
     }
 
     .profile-img {
@@ -44,13 +44,13 @@
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      margin: 0 auto 20px;
+      margin: 0 auto 18px;
       border: 3px solid #38bdf8;
     }
 
     .sidebar h2 {
-      font-size: 15px;
-      margin: 26px 0 12px;
+      font-size: 14px;
+      margin: 22px 0 10px;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: #38bdf8;
@@ -73,6 +73,33 @@
 
     .sidebar li {
       margin-bottom: 8px;
+    }
+
+    /* SIDEBAR MENU */
+    .menu {
+      margin-top: 22px;
+      margin-bottom: 26px;
+    }
+
+    .menu a {
+      display: block;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      color: #cbd5f5;
+      font-weight: 500;
+      transition: 0.25s ease;
+    }
+
+    .menu a:hover {
+      background: #020617;
+      color: #38bdf8;
+    }
+
+    .menu a.active {
+      background: #020617;
+      color: #38bdf8;
+      box-shadow: inset 0 0 0 1px #1e293b;
     }
 
     /* MAIN CONTENT */
@@ -114,7 +141,7 @@
     }
 
     .item {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .item-title {
@@ -125,7 +152,6 @@
     .item-sub {
       font-size: 13px;
       color: #64748b;
-      margin-bottom: 4px;
     }
 
     /* PRINT */
@@ -150,25 +176,19 @@
   <aside class="sidebar">
     <img src="image/profile.png" alt="Roel Delos Reyes" class="profile-img" />
 
+    <!-- SIDEBAR MENU (THIS IS WHAT WAS MISSING BEFORE) -->
+    <nav class="menu">
+      <a href="index.html" class="active">Resume</a>
+      <a href="works.html">Previous Works</a>
+      <a href="https://rdlrportfolio.netlify.app" target="_blank">Portfolio</a>
+      <a href="https://github.com/leorxdxd" target="_blank">GitHub</a>
+    </nav>
+
     <h2>Contact</h2>
     <p>
       📧 roeldelosreyes0105@gmail.com<br />
       📞 +63 950 112 2587<br />
       💬 WhatsApp: +63 950 112 2587
-    </p>
-
-    <h2>Portfolio</h2>
-    <p>
-      🌐 <a href="https://rdlrportfolio.netlify.app" target="_blank">
-        rdlrportfolio.netlify.app
-      </a>
-    </p>
-
-    <h2>GitHub</h2>
-    <p>
-      💻 <a href="https://github.com/leorxdxd" target="_blank">
-        github.com/leorxdxd
-      </a>
     </p>
 
     <h2>Skills</h2>
@@ -194,7 +214,7 @@
     </ul>
   </aside>
 
-  <!-- MAIN -->
+  <!-- MAIN CONTENT -->
   <main class="content">
     <div class="name">Roel Delos Reyes</div>
     <div class="role">Fullstack Web Developer</div>
@@ -219,26 +239,6 @@
         </div>
       </div>
     </div>
-
-    <div class="section">
-      <div class="section-title">Previous Works</div>
-
-      <div class="item">
-        <div class="item-title">Allegiance Partners</div>
-        <div class="item-sub">allegiancepartners.com.au</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">IMH Pediatrics</div>
-        <div class="item-sub">imhpeds.com</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">Allevia Health</div>
-        <div class="item-sub">allevia-health.vercel.app</div>
-      </div>
-    </div>
-
   </main>
 
 </div>
