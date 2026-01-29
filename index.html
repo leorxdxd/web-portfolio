@@ -2,244 +2,177 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Roel Delos Reyes | Resume</title>
+  <title>Roel Delos Reyes | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      padding: 40px;
-      background: #e5e7eb;
       font-family: 'Inter', sans-serif;
-    }
-
-    /* A4 PAGE */
-    .page {
-      width: 210mm;
-      height: 297mm;
-      margin: auto;
-      background: #ffffff;
-      display: grid;
-      grid-template-columns: 32% 68%;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-    }
-
-    /* SIDEBAR */
-    .sidebar {
-      background: #0f172a;
-      color: #ffffff;
-      padding: 34px 26px;
-    }
-
-    .profile-img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 18px;
-      border: 3px solid #38bdf8;
-    }
-
-    .sidebar h2 {
-      font-size: 14px;
-      margin: 22px 0 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #38bdf8;
-    }
-
-    .sidebar p,
-    .sidebar li,
-    .sidebar a {
-      font-size: 13px;
+      background: radial-gradient(circle at top, #0f172a, #020617);
       color: #e5e7eb;
-      line-height: 1.6;
-      text-decoration: none;
     }
 
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 24px 80px;
     }
 
-    .sidebar li {
-      margin-bottom: 8px;
+    header {
+      text-align: center;
+      margin-bottom: 60px;
     }
 
-    /* SIDEBAR MENU */
-    .menu {
-      margin-top: 22px;
-      margin-bottom: 26px;
-    }
-
-    .menu a {
-      display: block;
-      padding: 10px 12px;
-      margin-bottom: 8px;
-      border-radius: 8px;
-      color: #cbd5f5;
-      font-weight: 500;
-      transition: 0.25s ease;
-    }
-
-    .menu a:hover {
-      background: #020617;
-      color: #38bdf8;
-    }
-
-    .menu a.active {
-      background: #020617;
-      color: #38bdf8;
-      box-shadow: inset 0 0 0 1px #1e293b;
-    }
-
-    /* MAIN CONTENT */
-    .content {
-      padding: 40px;
-      color: #0f172a;
-    }
-
-    .name {
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .role {
-      font-size: 15px;
-      font-weight: 500;
-      color: #2563eb;
-      margin-bottom: 30px;
-    }
-
-    .section {
-      margin-bottom: 26px;
-    }
-
-    .section-title {
-      font-size: 15px;
-      font-weight: 600;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 6px;
+    header h1 {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
       margin-bottom: 12px;
     }
 
-    .content p {
-      font-size: 14px;
-      color: #334155;
+    header p {
+      font-size: 16px;
+      color: #94a3b8;
+      max-width: 700px;
+      margin: auto;
       line-height: 1.7;
-      margin: 0;
     }
 
-    .item {
+    .resume-btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      background: #38bdf8;
+      color: #020617;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.25s ease;
+    }
+
+    .resume-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(56,189,248,0.4);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 60px;
+    }
+
+    .card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 22px;
+      padding: 26px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
+      box-shadow: 0 30px 60px rgba(56,189,248,0.18);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .card span {
+      font-size: 14px;
+      color: #94a3b8;
+      display: block;
       margin-bottom: 14px;
     }
 
-    .item-title {
+    .card p {
+      font-size: 15px;
+      color: #cbd5f5;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .card a {
+      color: #38bdf8;
       font-weight: 600;
+      text-decoration: none;
       font-size: 14px;
     }
 
-    .item-sub {
-      font-size: 13px;
-      color: #64748b;
-    }
-
-    /* PRINT */
-    @media print {
-      body {
-        padding: 0;
-        background: none;
-      }
-      .page {
-        box-shadow: none;
-        margin: 0;
-      }
+    .card a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
 
-<div class="page">
+<div class="container">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <img src="image/profile.png" alt="Roel Delos Reyes" class="profile-img" />
-
-    <!-- SIDEBAR MENU (THIS IS WHAT WAS MISSING BEFORE) -->
-    <nav class="menu">
-      <a href="index.html" class="active">Resume</a>
-      <a href="works.html">Previous Works</a>
-      <a href="https://rdlrportfolio.netlify.app" target="_blank">Portfolio</a>
-      <a href="https://github.com/leorxdxd" target="_blank">GitHub</a>
-    </nav>
-
-    <h2>Contact</h2>
+  <header>
+    <h1>Roel Delos Reyes</h1>
     <p>
-      📧 roeldelosreyes0105@gmail.com<br />
-      📞 +63 950 112 2587<br />
-      💬 WhatsApp: +63 950 112 2587
+      Fullstack Web Developer specializing in modern, responsive, and scalable
+      web applications. Below are selected real-world projects I’ve built for
+      businesses and organizations.
     </p>
 
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>PHP & MySQL</li>
-      <li>React & Next.js</li>
-      <li>Node.js</li>
-      <li>WordPress Development</li>
-      <li>REST APIs</li>
-      <li>Git & GitHub</li>
-      <li>Cybersecurity Basics</li>
-    </ul>
+    <a href="works.html" class="resume-btn">View CV / Resume</a>
+  </header>
 
-    <h2>Soft Skills</h2>
-    <ul>
-      <li>Problem Solving</li>
-      <li>Communication</li>
-      <li>Critical Thinking</li>
-      <li>Team Collaboration</li>
-      <li>Time Management</li>
-      <li>Adaptability</li>
-    </ul>
-  </aside>
+  <div class="grid">
 
-  <!-- MAIN CONTENT -->
-  <main class="content">
-    <div class="name">Roel Delos Reyes</div>
-    <div class="role">Fullstack Web Developer</div>
-
-    <div class="section">
-      <div class="section-title">Profile</div>
+    <div class="card">
+      <h3>Personal Portfolio</h3>
+      <span>rdlrportfolio.netlify.app</span>
       <p>
-        Fullstack Web Developer with hands-on experience building modern,
-        responsive, and scalable web applications. Skilled in frontend and
-        backend development, WordPress solutions, and cybersecurity-aware
-        practices. Focused on clean code, performance, and delivering
-        high-quality digital products.
+        My personal portfolio showcasing projects, skills, and modern frontend
+        design practices.
       </p>
+      <a href="https://rdlrportfolio.netlify.app" target="_blank">Visit Website →</a>
     </div>
 
-    <div class="section">
-      <div class="section-title">Education</div>
-      <div class="item">
-        <div class="item-title">Bachelor of Science in Information Technology</div>
-        <div class="item-sub">
-          Southville International School and Colleges — Major in Cybersecurity
-        </div>
-      </div>
+    <div class="card">
+      <h3>Allegiance Partners</h3>
+      <span>Corporate Website · Australia</span>
+      <p>
+        Designed and developed a professional corporate website with a strong
+        focus on usability, performance, and business credibility.
+      </p>
+      <a href="https://allegiancepartners.com.au" target="_blank">Visit Website →</a>
     </div>
-  </main>
+
+    <div class="card">
+      <h3>IMH Pediatrics</h3>
+      <span>Healthcare Website · USA</span>
+      <p>
+        Built a healthcare-focused WordPress website with clean UI, structured
+        content, accessibility considerations, and security best practices.
+      </p>
+      <a href="https://imhpeds.com/" target="_blank">Visit Website →</a>
+    </div>
+
+    <div class="card">
+      <h3>Allevia Health</h3>
+      <span>Web Application · Vercel</span>
+      <p>
+        Developed a modern web application with responsive layout, fast load
+        times, and scalable frontend architecture.
+      </p>
+      <a href="https://allevia-health.vercel.app/" target="_blank">Visit Website →</a>
+    </div>
+
+  </div>
 
 </div>
 
