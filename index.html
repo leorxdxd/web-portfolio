@@ -11,9 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -24,7 +22,7 @@
     }
 
     .resume {
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
       background: #020617;
       border-radius: 18px;
@@ -44,9 +42,9 @@
     }
 
     .name {
-      font-size: 34px;
+      font-size: 36px;
       font-weight: 800;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.6px;
     }
 
     .title {
@@ -69,13 +67,11 @@
       font-weight: 500;
     }
 
-    .contact a:hover {
-      text-decoration: underline;
-    }
+    .contact a:hover { text-decoration: underline; }
 
     /* SECTIONS */
     .section {
-      margin-bottom: 32px;
+      margin-bottom: 36px;
     }
 
     .section-title {
@@ -96,7 +92,7 @@
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 28px;
     }
 
     /* SKILLS */
@@ -112,13 +108,40 @@
       padding: 8px 14px;
       border-radius: 999px;
       font-size: 13px;
-      color: #e5e7eb;
       transition: all 0.2s ease;
     }
 
     .skill:hover {
       border-color: #38bdf8;
       box-shadow: 0 0 0 1px rgba(56,189,248,0.3);
+    }
+
+    /* LINKS / PROJECTS */
+    .link-card {
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid #1e293b;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.25s ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-2px);
+      border-color: #38bdf8;
+      box-shadow: 0 10px 25px rgba(56,189,248,0.15);
+    }
+
+    .link-info strong {
+      display: block;
+      font-size: 15px;
+    }
+
+    .link-info span {
+      font-size: 13px;
+      color: #94a3b8;
     }
 
     /* EDUCATION */
@@ -133,7 +156,6 @@
       font-size: 14px;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       font-size: 13px;
@@ -144,108 +166,133 @@
     }
 
     @media (max-width: 768px) {
-      .header {
-        flex-direction: column;
-      }
-
-      .contact {
-        text-align: left;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
+      .header { flex-direction: column; }
+      .contact { text-align: left; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
+<div class="resume">
 
-  <div class="resume">
-
-    <!-- HEADER -->
-    <div class="header">
-      <div>
-        <div class="name">Roel Delos Reyes</div>
-        <div class="title">Fullstack Web Developer</div>
-      </div>
-
-      <div class="contact">
-        📧 <a href="mailto:roeldelosreyes0105@gmail.com">roeldelosreyes0105@gmail.com</a><br />
-        📞 +63 950 112 2587<br />
-        💬 WhatsApp: +63 950 112 2587<br />
-        💻 GitHub: <a href="https://github.com/leorxdxd" target="_blank">github.com/leorxdxd</a>
-      </div>
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <div class="name">Roel Delos Reyes</div>
+      <div class="title">Fullstack Web Developer</div>
     </div>
 
-    <!-- SUMMARY -->
+    <div class="contact">
+      📧 <a href="mailto:roeldelosreyes0105@gmail.com">roeldelosreyes0105@gmail.com</a><br />
+      📞 +63 950 112 2587<br />
+      💬 WhatsApp: +63 950 112 2587<br />
+      💻 GitHub: <a href="https://github.com/leorxdxd" target="_blank">github.com/leorxdxd</a>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary">
+      Fullstack Web Developer with strong experience building modern, responsive,
+      and scalable websites and applications using multiple frameworks and platforms.
+      Skilled in frontend and backend development, WordPress solutions, and security-aware
+      practices. Passionate about clean code, performance, and delivering real business value.
+    </div>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <div class="section">
+    <div class="section-title">Portfolio</div>
+    <div class="link-card">
+      <div class="link-info">
+        <strong>Personal Portfolio</strong>
+        <span>rdlrportfolio.netlify.app</span>
+      </div>
+      <a href="https://rdlrportfolio.netlify.app" target="_blank">Visit →</a>
+    </div>
+  </div>
+
+  <!-- SELECTED WORKS -->
+  <div class="section">
+    <div class="section-title">Selected Works</div>
+
+    <div class="link-card">
+      <div class="link-info">
+        <strong>Allegiance Partners</strong>
+        <span>allegiancepartners.com.au</span>
+      </div>
+      <a href="https://allegiancepartners.com.au" target="_blank">View →</a>
+    </div>
+
+    <div class="link-card">
+      <div class="link-info">
+        <strong>IMH Pediatrics</strong>
+        <span>imhpeds.com</span>
+      </div>
+      <a href="https://imhpeds.com/" target="_blank">View →</a>
+    </div>
+
+    <div class="link-card">
+      <div class="link-info">
+        <strong>Allevia Health</strong>
+        <span>allevia-health.vercel.app</span>
+      </div>
+      <a href="https://allevia-health.vercel.app/" target="_blank">View →</a>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="grid">
+
     <div class="section">
-      <div class="section-title">Professional Summary</div>
-      <div class="summary">
-        Results-driven <strong>Fullstack Web Developer</strong> with hands-on experience building
-        modern, responsive, and scalable web applications using multiple frameworks and platforms.
-        Strong background in both frontend and backend development, with a focus on clean code,
-        performance, security awareness, and user-centered design. Passionate about solving real-world
-        problems through technology and continuously improving technical and soft skills.
+      <div class="section-title">Hard Skills</div>
+      <div class="skills-list">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">PHP</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">React</div>
+        <div class="skill">Next.js</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">WordPress Development</div>
+        <div class="skill">REST APIs</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Basic Cybersecurity</div>
       </div>
     </div>
 
-    <!-- GRID SECTION -->
-    <div class="grid">
-
-      <!-- HARD SKILLS -->
-      <div class="section">
-        <div class="section-title">Hard Skills</div>
-        <div class="skills-list">
-          <div class="skill">HTML5</div>
-          <div class="skill">CSS3</div>
-          <div class="skill">JavaScript</div>
-          <div class="skill">PHP</div>
-          <div class="skill">MySQL</div>
-          <div class="skill">React</div>
-          <div class="skill">Next.js</div>
-          <div class="skill">Node.js</div>
-          <div class="skill">REST APIs</div>
-          <div class="skill">WordPress Development</div>
-          <div class="skill">Framework-based Development</div>
-          <div class="skill">Responsive Design</div>
-          <div class="skill">Git & GitHub</div>
-          <div class="skill">Basic Cybersecurity Practices</div>
-        </div>
-      </div>
-
-      <!-- SOFT SKILLS -->
-      <div class="section">
-        <div class="section-title">Soft Skills</div>
-        <div class="skills-list">
-          <div class="skill">Problem Solving</div>
-          <div class="skill">Critical Thinking</div>
-          <div class="skill">Time Management</div>
-          <div class="skill">Communication</div>
-          <div class="skill">Team Collaboration</div>
-          <div class="skill">Adaptability</div>
-          <div class="skill">Attention to Detail</div>
-          <div class="skill">Continuous Learning</div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- EDUCATION -->
     <div class="section">
-      <div class="section-title">Education</div>
-      <div class="edu-title">Bachelor of Science in Information Technology</div>
-      <div class="edu-school">
-        Southville International School and Colleges<br />
-        Major in Cybersecurity
+      <div class="section-title">Soft Skills</div>
+      <div class="skills-list">
+        <div class="skill">Problem Solving</div>
+        <div class="skill">Communication</div>
+        <div class="skill">Critical Thinking</div>
+        <div class="skill">Team Collaboration</div>
+        <div class="skill">Time Management</div>
+        <div class="skill">Adaptability</div>
+        <div class="skill">Attention to Detail</div>
       </div>
     </div>
-
-    <footer>
-      © 2026 Roel Delos Reyes
-    </footer>
 
   </div>
 
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="edu-title">Bachelor of Science in Information Technology</div>
+    <div class="edu-school">
+      Southville International School and Colleges<br />
+      Major in Cybersecurity
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Roel Delos Reyes
+  </footer>
+
+</div>
 </body>
 </html>
