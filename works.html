@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Roel Delos Reyes | Previous Works</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: #e5e7eb;
+    }
+
+    /* NAV */
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 28px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.3px;
+    }
+
+    .nav a {
+      color: #94a3b8;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: #38bdf8;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 40px 24px 20px;
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 16px;
+      color: #94a3b8;
+      line-height: 1.7;
+    }
+
+    /* GRID */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 24px 80px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #020617, #020617f5);
+      border-radius: 22px;
+      padding: 26px;
+      border: 1px solid #1e293b;
+      transition: all 0.35s ease;
+      animation: fadeUp 0.9s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
+      box-shadow: 0 30px 60px rgba(56,189,248,0.18);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card span {
+      font-size: 14px;
+      color: #94a3b8;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #cbd5f5;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #64748b;
+      padding-bottom: 40px;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="logo">Roel Delos Reyes</div>
+    <div>
+      <a href="index.html">Resume</a>
+      <a href="works.html" class="active">Previous Works</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Previous Works</h1>
+    <p>
+      A curated selection of real-world projects I’ve built for businesses and organizations,
+      focusing on performance, usability, and modern web standards.
+    </p>
+  </section>
+
+  <!-- WORKS GRID -->
+  <main class="container">
+    <div class="grid">
+
+      <div class="card">
+        <h3>Allegiance Partners</h3>
+        <span>Corporate Website · Australia</span>
+        <p>
+          Designed and developed a professional corporate website focused on clarity,
+          performance, and conversion-ready structure.
+        </p>
+        <a href="https://allegiancepartners.com.au" target="_blank">Visit Website →</a>
+      </div>
+
+      <div class="card">
+        <h3>IMH Pediatrics</h3>
+        <span>Healthcare Website · USA</span>
+        <p>
+          Built a healthcare-focused WordPress website with custom layouts, accessibility
+          considerations, and secure content management.
+        </p>
+        <a href="https://imhpeds.com/" target="_blank">Visit Website →</a>
+      </div>
+
+      <div class="card">
+        <h3>Allevia Health</h3>
+        <span>Web Application · Vercel</span>
+        <p>
+          Developed a modern, responsive web application with a clean UI, optimized
+          performance, and scalable frontend architecture.
+        </p>
+        <a href="https://allevia-health.vercel.app/" target="_blank">Visit Website →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Roel Delos Reyes
+  </footer>
+
+</body>
+</html>
