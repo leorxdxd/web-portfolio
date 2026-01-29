@@ -8,192 +8,135 @@
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
+      padding: 40px;
+      background: #e5e7eb;
       font-family: 'Inter', sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
     }
 
-    /* LAYOUT */
-    .layout {
+    /* A4 PAGE */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: auto;
+      background: #ffffff;
       display: grid;
-      grid-template-columns: 260px 1fr;
-      min-height: 100vh;
+      grid-template-columns: 32% 68%;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
     }
 
-    /* SIDEBAR */
+    /* LEFT SIDEBAR */
     .sidebar {
-      background: linear-gradient(180deg, #020617, #020617f5);
-      padding: 36px 26px;
-      border-right: 1px solid #1e293b;
-      animation: slideIn 0.8s ease forwards;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 36px 28px;
     }
 
-    .profile {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .profile img {
-      width: 110px;
-      height: 110px;
+    .profile-img {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #38bdf8;
-      box-shadow: 0 10px 30px rgba(56,189,248,0.35);
-      margin-bottom: 14px;
-    }
-
-    .profile h1 {
-      font-size: 18px;
-      margin: 0;
-      font-weight: 700;
-    }
-
-    .profile span {
-      font-size: 13px;
-      color: #94a3b8;
-    }
-
-    .menu {
-      margin-top: 30px;
-    }
-
-    .menu a {
       display: block;
-      padding: 12px 14px;
-      margin-bottom: 8px;
-      border-radius: 10px;
-      color: #cbd5f5;
+      margin: 0 auto 20px;
+      border: 3px solid #38bdf8;
+    }
+
+    .sidebar h2 {
+      font-size: 15px;
+      margin: 26px 0 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #38bdf8;
+    }
+
+    .sidebar p,
+    .sidebar li,
+    .sidebar a {
+      font-size: 13px;
+      color: #e5e7eb;
+      line-height: 1.6;
       text-decoration: none;
-      font-weight: 500;
-      transition: all 0.25s ease;
     }
 
-    .menu a:hover {
-      background: #020617;
-      color: #38bdf8;
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .menu a.active {
-      background: #020617;
-      color: #38bdf8;
-      box-shadow: inset 0 0 0 1px #1e293b;
+    .sidebar li {
+      margin-bottom: 8px;
     }
 
-    /* CONTENT */
+    /* MAIN CONTENT */
     .content {
-      padding: 60px;
-      animation: fadeUp 0.9s ease forwards;
+      padding: 40px;
+      color: #0f172a;
+    }
+
+    .name {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .role {
+      font-size: 15px;
+      font-weight: 500;
+      color: #2563eb;
+      margin-bottom: 30px;
     }
 
     .section {
-      margin-bottom: 42px;
+      margin-bottom: 26px;
     }
 
     .section-title {
-      font-size: 14px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #64748b;
-      margin-bottom: 18px;
-    }
-
-    .hero h2 {
-      font-size: 38px;
-      font-weight: 800;
-      letter-spacing: -0.8px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      max-width: 760px;
-      font-size: 16px;
-      color: #cbd5f5;
-      line-height: 1.8;
-    }
-
-    /* INFO GRID */
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 26px;
-    }
-
-    .card {
-      background: #020617;
-      border: 1px solid #1e293b;
-      border-radius: 18px;
-      padding: 24px;
-      transition: all 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: #38bdf8;
-      box-shadow: 0 20px 40px rgba(56,189,248,0.15);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      font-size: 18px;
+      font-size: 15px;
+      font-weight: 600;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 6px;
       margin-bottom: 12px;
     }
 
-    .card p {
+    .content p {
       font-size: 14px;
-      color: #cbd5f5;
+      color: #334155;
       line-height: 1.7;
+      margin: 0;
     }
 
-    /* SKILLS */
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    .item {
+      margin-bottom: 16px;
     }
 
-    .skill {
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid #1e293b;
+    .item-title {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .item-sub {
       font-size: 13px;
-      transition: 0.25s ease;
+      color: #64748b;
+      margin-bottom: 4px;
     }
 
-    .skill:hover {
-      border-color: #38bdf8;
-      box-shadow: 0 0 0 1px rgba(56,189,248,0.35);
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateX(-20px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    /* MOBILE */
-    @media (max-width: 900px) {
-      .layout {
-        grid-template-columns: 1fr;
+    /* PRINT */
+    @media print {
+      body {
+        padding: 0;
+        background: none;
       }
-      .sidebar {
-        border-right: none;
-        border-bottom: 1px solid #1e293b;
-      }
-      .content {
-        padding: 40px 24px;
+      .page {
+        box-shadow: none;
+        margin: 0;
       }
     }
   </style>
@@ -201,77 +144,100 @@
 
 <body>
 
-<div class="layout">
+<div class="page">
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
-    <div class="profile">
-      <img src="image/profile.png" alt="Roel Delos Reyes" />
-      <h1>Roel Delos Reyes</h1>
-      <span>Fullstack Web Developer</span>
-    </div>
+    <img src="image/profile.png" alt="Roel Delos Reyes" class="profile-img" />
 
-    <nav class="menu">
-      <a href="index.html" class="active">Resume</a>
-      <a href="works.html">Previous Works</a>
-      <a href="https://github.com/leorxdxd" target="_blank">GitHub</a>
-    </nav>
+    <h2>Contact</h2>
+    <p>
+      📧 roeldelosreyes0105@gmail.com<br />
+      📞 +63 950 112 2587<br />
+      💬 WhatsApp: +63 950 112 2587
+    </p>
+
+    <h2>Portfolio</h2>
+    <p>
+      🌐 <a href="https://rdlrportfolio.netlify.app" target="_blank">
+        rdlrportfolio.netlify.app
+      </a>
+    </p>
+
+    <h2>GitHub</h2>
+    <p>
+      💻 <a href="https://github.com/leorxdxd" target="_blank">
+        github.com/leorxdxd
+      </a>
+    </p>
+
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>PHP & MySQL</li>
+      <li>React & Next.js</li>
+      <li>Node.js</li>
+      <li>WordPress Development</li>
+      <li>REST APIs</li>
+      <li>Git & GitHub</li>
+      <li>Cybersecurity Basics</li>
+    </ul>
+
+    <h2>Soft Skills</h2>
+    <ul>
+      <li>Problem Solving</li>
+      <li>Communication</li>
+      <li>Critical Thinking</li>
+      <li>Team Collaboration</li>
+      <li>Time Management</li>
+      <li>Adaptability</li>
+    </ul>
   </aside>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN -->
   <main class="content">
+    <div class="name">Roel Delos Reyes</div>
+    <div class="role">Fullstack Web Developer</div>
 
-    <section class="section hero">
-      <h2>Professional Summary</h2>
+    <div class="section">
+      <div class="section-title">Profile</div>
       <p>
         Fullstack Web Developer with hands-on experience building modern,
         responsive, and scalable web applications. Skilled in frontend and
         backend development, WordPress solutions, and cybersecurity-aware
         practices. Focused on clean code, performance, and delivering
-        real business value.
+        high-quality digital products.
       </p>
-    </section>
+    </div>
 
-    <section class="section">
-      <div class="section-title">Core Skills</div>
-      <div class="skills">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">PHP</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">React</div>
-        <div class="skill">Next.js</div>
-        <div class="skill">Node.js</div>
-        <div class="skill">WordPress</div>
-        <div class="skill">REST APIs</div>
-        <div class="skill">Git & GitHub</div>
-        <div class="skill">Cybersecurity Basics</div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-title">Soft Skills</div>
-      <div class="skills">
-        <div class="skill">Problem Solving</div>
-        <div class="skill">Communication</div>
-        <div class="skill">Critical Thinking</div>
-        <div class="skill">Teamwork</div>
-        <div class="skill">Adaptability</div>
-        <div class="skill">Time Management</div>
-      </div>
-    </section>
-
-    <section class="section">
+    <div class="section">
       <div class="section-title">Education</div>
-      <div class="card">
-        <h3>Bachelor of Science in Information Technology</h3>
-        <p>
-          Southville International School and Colleges<br />
-          <strong>Major in Cybersecurity</strong>
-        </p>
+      <div class="item">
+        <div class="item-title">Bachelor of Science in Information Technology</div>
+        <div class="item-sub">
+          Southville International School and Colleges — Major in Cybersecurity
+        </div>
       </div>
-    </section>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Previous Works</div>
+
+      <div class="item">
+        <div class="item-title">Allegiance Partners</div>
+        <div class="item-sub">allegiancepartners.com.au</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">IMH Pediatrics</div>
+        <div class="item-sub">imhpeds.com</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">Allevia Health</div>
+        <div class="item-sub">allevia-health.vercel.app</div>
+      </div>
+    </div>
 
   </main>
 
