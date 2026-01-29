@@ -18,9 +18,25 @@
       font-family: 'Inter', sans-serif;
     }
 
+    /* BACK BUTTON */
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 16px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #2563eb;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    /* A4 PAGE */
     .page {
       width: 210mm;
-      height: 250mm;
+      height: 240mm;
       margin: auto;
       background: #ffffff;
       display: grid;
@@ -59,6 +75,7 @@
 
     .content {
       padding: 40px;
+      color: #0f172a;
     }
 
     .name {
@@ -106,14 +123,19 @@
       line-height: 1.7;
     }
 
+    /* PRINT */
     @media print {
       body { padding: 0; background: none; }
+      .back-btn { display: none; } /* hide button in PDF */
       .page { box-shadow: none; }
     }
   </style>
 </head>
 
 <body>
+
+<!-- GO BACK BUTTON -->
+<a href="index.html" class="back-btn">← Back to Portfolio</a>
 
 <div class="page">
 
@@ -150,8 +172,8 @@
       <p class="job-desc">
         Fullstack Web Developer with experience delivering production-ready
         websites and applications for healthcare and corporate clients.
-        Strong in frontend and backend development, WordPress solutions,
-        and performance optimization.
+        Strong background in frontend and backend development, WordPress
+        solutions, and performance optimization.
       </p>
     </div>
 
@@ -164,6 +186,8 @@
         <div class="job-desc">
           Designed and developed a corporate website emphasizing usability,
           responsive design, SEO-friendly structure, and performance optimization.
+          Worked closely with stakeholders to translate business requirements
+          into a polished digital product.
         </div>
       </div>
 
@@ -172,8 +196,8 @@
         <div class="job-sub">USA · Healthcare Website</div>
         <div class="job-desc">
           Built and maintained a healthcare-focused WordPress website with custom
-          layouts, structured content, accessibility considerations, and security
-          best practices.
+          layouts, structured content, accessibility considerations, and
+          security-aware development practices.
         </div>
       </div>
 
