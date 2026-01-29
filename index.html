@@ -52,9 +52,16 @@
       line-height: 1.7;
     }
 
-    .resume-btn {
-      display: inline-block;
+    /* BUTTONS */
+    .actions {
       margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .resume-btn {
       padding: 14px 28px;
       border-radius: 999px;
       background: #38bdf8;
@@ -69,13 +76,44 @@
       box-shadow: 0 15px 30px rgba(56,189,248,0.4);
     }
 
+    /* HIGHLIGHTED PORTFOLIO LINK */
+    .portfolio-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #020617, #020617cc);
+      border: 1px solid #38bdf8;
+      color: #e5e7eb;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.25s ease;
+    }
+
+    .portfolio-highlight span {
+      color: #38bdf8;
+    }
+
+    .portfolio-highlight:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(56,189,248,0.25);
+    }
+
     /* GRID */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 28px;
-      margin-top: 70px;
+      margin-top: 80px;
       text-align: left;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
     }
 
     .card {
@@ -83,7 +121,11 @@
       border: 1px solid #1e293b;
       border-radius: 22px;
       padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       transition: 0.3s ease;
+      min-height: 260px;
     }
 
     .card:hover {
@@ -109,6 +151,7 @@
       color: #cbd5f5;
       line-height: 1.7;
       margin-bottom: 18px;
+      flex-grow: 1;
     }
 
     .card a {
@@ -137,37 +180,56 @@
     web applications. Below are selected real-world projects I’ve built.
   </p>
 
-  <a href="works.html" class="resume-btn">View CV / Resume</a>
+  <!-- ACTIONS -->
+  <div class="actions">
+    <a href="works.html" class="resume-btn">View CV / Resume</a>
+
+    <a
+      href="https://rdlrportfolio.netlify.app"
+      target="_blank"
+      class="portfolio-highlight"
+    >
+      🌐 <span>rdlrportfolio.netlify.app</span>
+    </a>
+  </div>
 
   <!-- PROJECTS -->
   <div class="grid">
 
     <div class="card">
-      <h3>Personal Portfolio</h3>
-      <span>rdlrportfolio.netlify.app</span>
-      <p>My personal portfolio showcasing projects, skills, and modern UI practices.</p>
-      <a href="https://rdlrportfolio.netlify.app" target="_blank">Visit Website →</a>
-    </div>
-
-    <div class="card">
       <h3>Allegiance Partners</h3>
       <span>Corporate Website · Australia</span>
-      <p>Corporate website focused on performance, clarity, and business credibility.</p>
-      <a href="https://allegiancepartners.com.au" target="_blank">Visit Website →</a>
+      <p>
+        Professional corporate website designed for business credibility,
+        performance, and clean user experience.
+      </p>
+      <a href="https://allegiancepartners.com.au" target="_blank">
+        Visit Website →
+      </a>
     </div>
 
     <div class="card">
       <h3>IMH Pediatrics</h3>
       <span>Healthcare Website · USA</span>
-      <p>Healthcare-focused WordPress website with accessibility and security best practices.</p>
-      <a href="https://imhpeds.com/" target="_blank">Visit Website →</a>
+      <p>
+        Healthcare-focused WordPress website with structured content,
+        accessibility considerations, and security best practices.
+      </p>
+      <a href="https://imhpeds.com/" target="_blank">
+        Visit Website →
+      </a>
     </div>
 
     <div class="card">
       <h3>Allevia Health</h3>
       <span>Web Application</span>
-      <p>Modern responsive web application built with performance and scalability in mind.</p>
-      <a href="https://allevia-health.vercel.app/" target="_blank">Visit Website →</a>
+      <p>
+        Modern responsive web application built with clean UI, fast load times,
+        and scalable frontend architecture.
+      </p>
+      <a href="https://allevia-health.vercel.app/" target="_blank">
+        Visit Website →
+      </a>
     </div>
 
   </div>
