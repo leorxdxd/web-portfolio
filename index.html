@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roel Delos Reyes | Web Developer</title>
+  <title>Roel Delos Reyes | Fullstack Web Developer</title>
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -16,200 +16,228 @@
     }
 
     body {
+      margin: 0;
+      padding: 30px;
       font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top, #0f172a, #020617);
+      background: #0f172a;
       color: #e5e7eb;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
-      padding: 20px;
     }
 
-    .card {
-      max-width: 640px;
-      width: 100%;
-      background: linear-gradient(180deg, #020617, #020617f5);
+    .resume {
+      max-width: 900px;
+      margin: auto;
+      background: #020617;
       border-radius: 18px;
-      padding: 36px;
-      box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.03);
-      position: relative;
+      padding: 40px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
     }
 
+    /* HEADER */
     .header {
-      margin-bottom: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 24px;
+      margin-bottom: 32px;
     }
 
-    h1 {
-      font-size: 28px;
-      font-weight: 700;
-      margin: 0;
+    .name {
+      font-size: 34px;
+      font-weight: 800;
       letter-spacing: -0.5px;
     }
 
-    .role {
-      color: #94a3b8;
-      font-size: 15px;
+    .title {
+      font-size: 16px;
+      color: #38bdf8;
+      font-weight: 600;
       margin-top: 6px;
     }
 
-    .divider {
-      height: 1px;
-      background: linear-gradient(
-        to right,
-        transparent,
-        #1e293b,
-        transparent
-      );
-      margin: 28px 0;
-    }
-
-    .section {
-      margin-bottom: 26px;
-    }
-
-    .section-title {
-      font-size: 13px;
-      letter-spacing: 0.12em;
-      color: #64748b;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .link-list {
-      display: grid;
-      gap: 10px;
-    }
-
-    .link-card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 16px;
-      border-radius: 12px;
-      background: #020617;
-      border: 1px solid #1e293b;
-      transition: all 0.25s ease;
-    }
-
-    .link-card:hover {
-      transform: translateY(-2px);
-      border-color: #38bdf8;
-      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
-    }
-
-    .link-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .icon {
-      font-size: 18px;
-    }
-
-    .link-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .link-text strong {
-      font-size: 15px;
-      font-weight: 500;
-      color: #e5e7eb;
-    }
-
-    .link-text span {
-      font-size: 13px;
+    .contact {
+      font-size: 14px;
       color: #94a3b8;
+      line-height: 1.7;
+      text-align: right;
     }
 
-    a {
+    .contact a {
       color: #38bdf8;
       text-decoration: none;
-      font-size: 14px;
       font-weight: 500;
     }
 
-    a:hover {
+    .contact a:hover {
       text-decoration: underline;
     }
 
+    /* SECTIONS */
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 14px;
+    }
+
+    .summary {
+      font-size: 15px;
+      color: #cbd5f5;
+      line-height: 1.7;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    /* SKILLS */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #020617;
+      border: 1px solid #1e293b;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: #e5e7eb;
+      transition: all 0.2s ease;
+    }
+
+    .skill:hover {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 1px rgba(56,189,248,0.3);
+    }
+
+    /* EDUCATION */
+    .edu-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .edu-school {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
     footer {
-      margin-top: 32px;
       text-align: center;
       font-size: 13px;
       color: #64748b;
+      border-top: 1px solid #1e293b;
+      padding-top: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+      }
+
+      .contact {
+        text-align: left;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="card">
 
+  <div class="resume">
+
+    <!-- HEADER -->
     <div class="header">
-      <h1>Roel Delos Reyes</h1>
-      <div class="role">Web Developer</div>
-    </div>
+      <div>
+        <div class="name">Roel Delos Reyes</div>
+        <div class="title">Fullstack Web Developer</div>
+      </div>
 
-    <div class="divider"></div>
-
-    <div class="section">
-      <div class="section-title">Portfolio</div>
-      <div class="link-list">
-        <div class="link-card">
-          <div class="link-left">
-            <div class="icon">🌐</div>
-            <div class="link-text">
-              <strong>Personal Portfolio</strong>
-              <span>rdlrportfolio.netlify.app</span>
-            </div>
-          </div>
-          <a href="https://rdlrportfolio.netlify.app" target="_blank">Visit →</a>
-        </div>
+      <div class="contact">
+        📧 <a href="mailto:roeldelosreyes0105@gmail.com">roeldelosreyes0105@gmail.com</a><br />
+        📞 +63 950 112 2587<br />
+        💬 WhatsApp: +63 950 112 2587<br />
+        💻 GitHub: <a href="https://github.com/leorxdxd" target="_blank">github.com/leorxdxd</a>
       </div>
     </div>
 
+    <!-- SUMMARY -->
     <div class="section">
-      <div class="section-title">Selected Works</div>
-      <div class="link-list">
+      <div class="section-title">Professional Summary</div>
+      <div class="summary">
+        Results-driven <strong>Fullstack Web Developer</strong> with hands-on experience building
+        modern, responsive, and scalable web applications using multiple frameworks and platforms.
+        Strong background in both frontend and backend development, with a focus on clean code,
+        performance, security awareness, and user-centered design. Passionate about solving real-world
+        problems through technology and continuously improving technical and soft skills.
+      </div>
+    </div>
 
-        <div class="link-card">
-          <div class="link-left">
-            <div class="icon">💼</div>
-            <div class="link-text">
-              <strong>Allegiance Partners</strong>
-              <span>allegiancepartners.com.au</span>
-            </div>
-          </div>
-          <a href="https://allegiancepartners.com.au" target="_blank">View →</a>
+    <!-- GRID SECTION -->
+    <div class="grid">
+
+      <!-- HARD SKILLS -->
+      <div class="section">
+        <div class="section-title">Hard Skills</div>
+        <div class="skills-list">
+          <div class="skill">HTML5</div>
+          <div class="skill">CSS3</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">PHP</div>
+          <div class="skill">MySQL</div>
+          <div class="skill">React</div>
+          <div class="skill">Next.js</div>
+          <div class="skill">Node.js</div>
+          <div class="skill">REST APIs</div>
+          <div class="skill">WordPress Development</div>
+          <div class="skill">Framework-based Development</div>
+          <div class="skill">Responsive Design</div>
+          <div class="skill">Git & GitHub</div>
+          <div class="skill">Basic Cybersecurity Practices</div>
         </div>
+      </div>
 
-        <div class="link-card">
-          <div class="link-left">
-            <div class="icon">🧑‍⚕️</div>
-            <div class="link-text">
-              <strong>IMH Pediatrics</strong>
-              <span>imhpeds.com</span>
-            </div>
-          </div>
-          <a href="https://imhpeds.com/" target="_blank">View →</a>
+      <!-- SOFT SKILLS -->
+      <div class="section">
+        <div class="section-title">Soft Skills</div>
+        <div class="skills-list">
+          <div class="skill">Problem Solving</div>
+          <div class="skill">Critical Thinking</div>
+          <div class="skill">Time Management</div>
+          <div class="skill">Communication</div>
+          <div class="skill">Team Collaboration</div>
+          <div class="skill">Adaptability</div>
+          <div class="skill">Attention to Detail</div>
+          <div class="skill">Continuous Learning</div>
         </div>
+      </div>
 
-        <div class="link-card">
-          <div class="link-left">
-            <div class="icon">💊</div>
-            <div class="link-text">
-              <strong>Allevia Health</strong>
-              <span>allevia-health.vercel.app</span>
-            </div>
-          </div>
-          <a href="https://allevia-health.vercel.app/" target="_blank">View →</a>
-        </div>
+    </div>
 
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="edu-title">Bachelor of Science in Information Technology</div>
+      <div class="edu-school">
+        Southville International School and Colleges<br />
+        Major in Cybersecurity
       </div>
     </div>
 
@@ -218,5 +246,6 @@
     </footer>
 
   </div>
+
 </body>
 </html>
